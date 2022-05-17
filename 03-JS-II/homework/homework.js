@@ -63,6 +63,23 @@ function saludo(idioma) {
 }
 
 function colors(color) {
+  switch (color) {
+    case "blue":
+      return `This is ${color}`;
+      break;
+    case "red":
+      return `This is ${color}`;
+      break;
+    case "green":
+      return `This is ${color}`;
+      break;
+    case "orange":
+      return `This is ${color}`;
+      break;
+    default:
+      return "Color not found";
+      break;
+  }
   //La función recibe un color. Devolver el string correspondiente:
   //En caso que el color recibido sea "blue", devuleve --> "This is blue"
   //En caso que el color recibido sea "red", devuleve --> "This is red"
@@ -73,18 +90,28 @@ function colors(color) {
 }
 
 function esDiezOCinco(numero) {
+  if (numero === 10 || numero === 5) {
+    return true;
+  } else return false;
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
 }
 
 function estaEnRango(numero) {
+  if (numero < 50 && numero > 20) {
+    return true;
+  } else return false;
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
 }
 
 function esEntero(numero) {
+  let numFloor = Math.floor(numero);
+  if (numero == numFloor) {
+    return true;
+  } else return false;
   // Devuelve "true" si "numero" es un entero (int/integer)
   // Ejemplo: 0.8 -> false
   // Ejemplo: 1 -> true
@@ -95,6 +122,13 @@ function esEntero(numero) {
 }
 
 function fizzBuzz(numero) {
+  if (numero % 3 === 0 && numero % 5 === 0) {
+    return "fizzbuzz";
+  } else if (numero % 5 === 0) {
+    return "buzz";
+  } else if (numero % 3 === 0) {
+    return "fizz";
+  }
   // Si "numero" es divisible entre 3, devuelve "fizz"
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
